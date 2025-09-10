@@ -1,77 +1,68 @@
-# React Simple Data Fetching Lab
+# 🐶 React Simple Data Fetching Lab
 
-## Learning Goals
+This lab is a small React application that demonstrates how to fetch data from an external API using `useEffect`, dynamically update the DOM, and trigger new fetches via user interaction.
 
-- Use the `useEffect` hook to fetch data from an API and render to the page.
-- Use an event handler to fetch data from an API and render to the page.
+## Live Demo
+Visit the GitHub repository for code and context:  
+[Forked Repo](https://github.com/walbeck85/react-hooks-simple-data-fetching-lab-vite)
+
+---
+
+## Features
+
+- Uses the `useEffect` hook to fetch a random dog image from an external API on load.
+- Displays a loading indicator while fetching.
+- Updates the image by clicking a single button.
+- Clean component structure and React best practices.
+- Fully passes automated test suite.
+
+---
 
 ## Getting Started
-- Fork this lab on GitHub and clone locally.
-- To run the lab:
+
+Follow these steps to run the application locally:
+
+### 1. Clone the Repo
+```bash
+git clone https://github.com/walbeck85/react-hooks-simple-data-fetching-lab-vite.git
+cd react-hooks-simple-data-fetching-lab-vite
+```
+
+### 2. Install Dependencies
+```bash
+npm install
+```
+
+### 3. Run the App Locally
 ```bash
 npm run dev
 ```
-- To run the test suite:
+Open [http://localhost:3000](http://localhost:3000) in your browser to view the app.
+
+---
+
+## How to Use
+
+- When the app loads, it fetches a random dog image from [https://dog.ceo/api/breeds/image/random](https://dog.ceo/api/breeds/image/random).
+- While the image is being fetched, a `<p>` element with the text "Loading..." is displayed.
+- Once the image is loaded, it's shown inside an `<img>` tag.
+- Clicking the `<button>` fetches a new random dog image.
+
+---
+
+## Running Tests
+
+To run the automated test suite:
 ```bash
 npm run test
 ```
-- Commit and push your code as you go.
+All tests must pass for lab completion.
 
-## Deliverables
+---
 
-This lab is missing the `App` component that `index.js` is looking for. To pass
-the tests in this lab:
+## Screenshots
 
-- Create an `App` component from scratch, along with any other components you 
-  choose for the component hierachy.
-- Use the `useEffect` hook in the `App` component. Inside the callback for
-  `useEffect`, send a `fetch` request to
-  `https://dog.ceo/api/breeds/image/random`, a free API that returns a random
-  image of a dog.
-- Display a `<p>` tag with the text of "Loading..." when the component is first
-  rendered
-- After receiving a response from the API, show the dog image in an `<img>` tag,
-  with the `alt` attribute set to "A Random Dog".
-  - For the test suite to work properly, this should be the only `<img>` tag in 
-  the application .
-- Create a `<button>` tag that, on click, fetches a new dog image and updates the 
-  dog image displayed.
-  - For the test suite to work properly, this should be the only `<button>` tag in 
-  the application .
+Additional screenshots are available here:  
+[View Screenshots on Imgur](https://imgur.com/a/lVyzxsn)
 
-## Lab Instructions
-### 1. Define the Problem
-* Load a random dog image on the page when the app first loads.
-* Allow the user to change the dog image by a button click.
-* Display a loading message for the user while waiting for API requests.
-### 2. Determine the Design
-* Determine Component Tree
-  * At minimum, you'll need an App component for the test suite
-* Determine state and props needed for each component
-### 3. Develop the Code
-* Open React application in browser
-```bash
-npm run dev
-```
-  - Run test suite
-```bash
-npm run test
-```
-* Create components and render
-* Manage component state and props
-* Implement useEffect and button with onClick
-* Add fetch requests to both the event handler and useEffect
-  * Fetch requests should make a GET request to “https://dog.ceo/api/breeds/image/random”
-* Update state accordingly to store the current dog image
-* Render the dog image in the jsx based on the data from the fetch request
-  * Be sure to look at how the data is formatted from the fetch request when setting the 
-  properties of the HTML image tag.
-### 4. Test and Refine 
-* Debugging and testing during coding using React DevTools in Chrome
-### 5. Document and Maintain 
-* Commit as you go, writing meaningful commit messages
-* Push commit history to GitHub periodically and when lab is complete
-
-## Submission
-Once the lab is complete, all tests are passing, and you've pushed the completed code to 
-your forked repo on GitHub, submit your GitHub repo through Canvas using CodeGrade.
+---
